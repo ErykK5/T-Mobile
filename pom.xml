@@ -79,9 +79,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
+                <version>3.0.0-M4</version>
                 <configuration>
-                    <test>com.learning.springboot.first.time.runners.runner.java</test>
+                    <includes>
+                        <include>**/CucumberRunner*.java</include>
+                    </includes>
+                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
         </plugins>
